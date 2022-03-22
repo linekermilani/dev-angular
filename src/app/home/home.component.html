@@ -1,0 +1,10 @@
+<h1>Conteúdo home</h1>
+
+<mat-slider min="1" max="100" step="1" value="50"></mat-slider>
+
+<div *ngFor="let produto of produtos">
+    <h3>ID: {{produto.id}} Nome: {{produto.nome}}</h3>
+    <h4>{{produto.desc}}</h4>
+    <p>{{produto.foto}}</p>
+    <img src="{{produto.foto}}">
+</div>
