@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Produto } from 'src/models/produto.model';
+import { CadastroService } from 'src/services/cadastro.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-incluir',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IncluirComponent implements OnInit {
 
-  constructor() { }
+  produto : Produto = new Produto();
+
+  constructor(private cadastro : CadastroService,
+    private router : Router) { }
 
   ngOnInit(): void {
   }
 
+  salvarProduto(){
+    this.cadastro.incluir(this.produto).subscribe(() => {
+      this.router.navigate(['/cadastros/produtos']);
+    });
+  }
 }

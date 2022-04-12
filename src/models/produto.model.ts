@@ -1,7 +1,7 @@
-export interface Produto {
+export class Produto {
 
-    id: BigInteger,
-    nome: String,
-    desc: String,
-    foto: String
+    id: number = 0;
+    nome: String = '';
+    desc: String = '';
+    foto: String = '';
 }

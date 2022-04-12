@@ -18,7 +18,7 @@ export class CadastroService {
   }
 
   buscarPorId(id: number) : Observable<Produto>{
-    return this.http.get<Produto>(URL + "/" + id);
+    return this.http.get<Produto>(this.URL + "/" + id);
   }
 
   incluir(produto : Produto) : Observable<any>{

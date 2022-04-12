@@ -12,6 +12,9 @@ import { AdminComponent } from './admin/admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from "@angular/material/slider";
 import { MatTableModule } from "@angular/material/table";
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input'
 
 import { HttpClientModule } from "@angular/common/http";
 import { IncluirComponent } from './cadastros/produtos/incluir/incluir.component';
@@ -19,6 +22,7 @@ import { EditarComponent } from './cadastros/produtos/editar/editar.component';
 import { ExcluirComponent } from './cadastros/produtos/excluir/excluir.component';
 import { ListarComponent } from './cadastros/produtos/listar/listar.component';
 import { CadastrosComponent } from './cadastros/cadastros/cadastros.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,6 +40,11 @@ import { CadastrosComponent } from './cadastros/cadastros/cadastros.component';
     CadastrosComponent
   ],
   imports: [
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatCardModule,
     HttpClientModule,
     MatTableModule,
     MatSliderModule,
